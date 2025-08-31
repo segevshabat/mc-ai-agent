@@ -1,0 +1,151 @@
+# Magic Plugin Spells Configuration
+# This file defines all available spells in the magic plugin
+
+spells:
+  # Combat Spells
+  fireball:
+    name: "Fireball"
+    description: "Launch a fireball at your target"
+    category: "combat"
+    icon: "FIRE_CHARGE"
+    cooldown: 3
+    range: 30
+    enabled: true
+    costs:
+      xp: 1
+    
+  lightning:
+    name: "Lightning Strike"
+    description: "Strike your target with lightning"
+    category: "combat"
+    icon: "LIGHTNING_ROD"
+    cooldown: 5
+    range: 50
+    enabled: true
+    costs:
+      xp: 2
+    
+  explosion:
+    name: "Explosion"
+    description: "Create a powerful explosion"
+    category: "combat"
+    icon: "TNT"
+    cooldown: 10
+    range: 40
+    enabled: true
+    costs:
+      xp: 3
+  
+  # Utility Spells
+  heal:
+    name: "Heal"
+    description: "Restore your health"
+    category: "utility"
+    icon: "GOLDEN_APPLE"
+    cooldown: 8
+    range: 0
+    enabled: true
+    costs:
+      xp: 2
+    
+  teleport:
+    name: "Teleport"
+    description: "Teleport to your target location"
+    category: "utility"
+    icon: "ENDER_PEARL"
+    cooldown: 15
+    range: 100
+    enabled: true
+    costs:
+      xp: 5
+    
+  light:
+    name: "Light"
+    description: "Create light at target location"
+    category: "utility"
+    icon: "TORCH"
+    cooldown: 1
+    range: 20
+    enabled: true
+    costs:
+      xp: 1
+  
+  # Defensive Spells
+  shield:
+    name: "Magic Shield"
+    description: "Protect yourself from damage"
+    category: "defensive"
+    icon: "SHIELD"
+    cooldown: 30
+    range: 0
+    enabled: true
+    costs:
+      xp: 3
+    
+  freeze:
+    name: "Freeze"
+    description: "Freeze enemies in place"
+    category: "defensive"
+    icon: "ICE"
+    cooldown: 12
+    range: 25
+    enabled: true
+    costs:
+      xp: 2
+  
+  # Construction Spells
+  build_wall:
+    name: "Build Wall"
+    description: "Create a wall of blocks"
+    category: "construction"
+    icon: "STONE_BRICKS"
+    cooldown: 5
+    range: 30
+    enabled: true
+    costs:
+      xp: 2
+    
+  fill_area:
+    name: "Fill Area"
+    description: "Fill an area with blocks"
+    category: "construction"
+    icon: "BUCKET"
+    cooldown: 8
+    range: 40
+    enabled: true
+    costs:
+      xp: 3
+    
+  bridge:
+    name: "Bridge"
+    description: "Create a bridge to your target"
+    category: "construction"
+    icon: "OAK_PLANKS"
+    cooldown: 3
+    range: 50
+    enabled: true
+    costs:
+      xp: 1
+  
+  # Advanced Spells
+  meteor:
+    name: "Meteor"
+    description: "Call down a meteor from the sky"
+    category: "advanced"
+    icon: "MAGMA_BLOCK"
+    cooldown: 60
+    range: 100
+    enabled: true
+    costs:
+      xp: 10
+    
+  time_stop:
+    name: "Time Stop"
+    description: "Stop time around you"
+    category: "advanced"
+    icon: "CLOCK"
+    cooldown: 120
+    range: 20
+    enabled: true
+    costs:
+      xp: 15 

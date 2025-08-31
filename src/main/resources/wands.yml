@@ -1,0 +1,182 @@
+# Magic Plugin Wands Configuration
+# This file defines all available wand templates
+
+wands:
+  # Basic Wands
+  beginner:
+    name: "Beginner's Wand"
+    description: "A simple wand for new magic users"
+    material: "STICK"
+    spells:
+      - "light"
+      - "heal"
+    materials:
+      - "TORCH"
+      - "WOOL"
+    locked: false
+    max_uses: -1
+    xp_regeneration: 0.1
+    damage_reduction: 0.0
+    cost_reduction: 0.1
+    
+  apprentice:
+    name: "Apprentice Wand"
+    description: "A wand for developing wizards"
+    material: "BLAZE_ROD"
+    spells:
+      - "light"
+      - "heal"
+      - "fireball"
+      - "teleport"
+    materials:
+      - "TORCH"
+      - "WOOL"
+      - "STONE"
+      - "WOOD"
+    locked: false
+    max_uses: -1
+    xp_regeneration: 0.2
+    damage_reduction: 0.1
+    cost_reduction: 0.2
+    
+  master:
+    name: "Master's Wand"
+    description: "A powerful wand for skilled mages"
+    material: "END_ROD"
+    spells:
+      - "light"
+      - "heal"
+      - "fireball"
+      - "lightning"
+      - "teleport"
+      - "shield"
+      - "freeze"
+    materials:
+      - "TORCH"
+      - "WOOL"
+      - "STONE"
+      - "WOOD"
+      - "IRON_BLOCK"
+      - "GOLD_BLOCK"
+    locked: false
+    max_uses: -1
+    xp_regeneration: 0.5
+    damage_reduction: 0.2
+    cost_reduction: 0.3
+  
+  # Specialized Wands
+  combat:
+    name: "Combat Wand"
+    description: "A wand focused on battle magic"
+    material: "IRON_SWORD"
+    spells:
+      - "fireball"
+      - "lightning"
+      - "explosion"
+      - "shield"
+      - "freeze"
+    materials:
+      - "TNT"
+      - "IRON_BLOCK"
+      - "OBSIDIAN"
+    locked: false
+    max_uses: -1
+    xp_regeneration: 0.1
+    damage_reduction: 0.3
+    cost_reduction: 0.1
+    
+  builder:
+    name: "Builder's Wand"
+    description: "A wand designed for construction"
+    material: "GOLDEN_PICKAXE"
+    spells:
+      - "build_wall"
+      - "fill_area"
+      - "bridge"
+      - "light"
+    materials:
+      - "STONE"
+      - "WOOD"
+      - "GLASS"
+      - "BRICK"
+      - "IRON_BLOCK"
+      - "GOLD_BLOCK"
+      - "DIAMOND_BLOCK"
+    locked: false
+    max_uses: -1
+    xp_regeneration: 0.3
+    damage_reduction: 0.0
+    cost_reduction: 0.4
+    
+  healer:
+    name: "Healer's Wand"
+    description: "A wand focused on healing and protection"
+    material: "GOLDEN_APPLE"
+    spells:
+      - "heal"
+      - "shield"
+      - "light"
+      - "teleport"
+    materials:
+      - "GOLDEN_APPLE"
+      - "POTION"
+      - "EMERALD"
+    locked: false
+    max_uses: -1
+    xp_regeneration: 0.8
+    damage_reduction: 0.4
+    cost_reduction: 0.5
+  
+  # Special Wands
+  demo:
+    name: "Demo Wand"
+    description: "A demonstration wand with free casting"
+    material: "NETHER_STAR"
+    spells:
+      - "light"
+      - "heal"
+      - "fireball"
+      - "teleport"
+      - "lightning"
+    materials:
+      - "TORCH"
+      - "STONE"
+      - "WOOD"
+    locked: false
+    max_uses: -1
+    xp_regeneration: 1.0
+    damage_reduction: 0.5
+    cost_reduction: 1.0  # Free casting
+    
+  admin:
+    name: "Admin Wand"
+    description: "An administrative wand with all spells"
+    material: "COMMAND_BLOCK"
+    spells:
+      - "light"
+      - "heal"
+      - "fireball"
+      - "lightning"
+      - "explosion"
+      - "teleport"
+      - "shield"
+      - "freeze"
+      - "build_wall"
+      - "fill_area"
+      - "bridge"
+      - "meteor"
+      - "time_stop"
+    materials:
+      - "TORCH"
+      - "STONE"
+      - "WOOD"
+      - "IRON_BLOCK"
+      - "GOLD_BLOCK"
+      - "DIAMOND_BLOCK"
+      - "EMERALD_BLOCK"
+      - "NETHERITE_BLOCK"
+    locked: true
+    max_uses: -1
+    xp_regeneration: 2.0
+    damage_reduction: 0.9
+    cost_reduction: 1.0  # Free casting 

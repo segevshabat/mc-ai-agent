@@ -1,0 +1,177 @@
+name: MagicPlugin
+version: '${project.version}'
+main: com.magicplugin.MagicPlugin
+api-version: '1.21'
+authors: [MagicDeveloper]
+description: Advanced magic plugin with wands, spells, and construction magic
+website: https://github.com/magicdeveloper/magic-plugin
+
+commands:
+  wand:
+    description: Main wand command for creating and managing wands
+    usage: |
+      /wand : Create a new, empty wand
+      /wand <name> : Create a new wand from preset templates
+      /wand list : List available wand templates
+      /wand add <spell> : Add a spell to current wand
+      /wand fill : Fill wand with all known spells
+      /wand remove <spell> : Remove a spell from current wand
+      /wand configure <property> <value> : Configure wand properties
+      /wand upgrade <property> <value> : Upgrade wand properties
+      /wand combine <wand> : Combine wands
+      /wand add material <material> : Add material to wand
+      /wand remove material <material> : Remove material from wand
+      /wand name <name> : Name a wand
+      /wand describe : Show wand properties
+      /wand unlock : Unlock a locked wand
+      /wand enchant : Create wand from held item
+      /wand unenchant : Destroy current wand
+      /wand enchant <xp> : Add XP levels to wand
+    permission: magic.commands.wand
+    permission-message: You don't have permission to use this command!
+    
+  wandp:
+    description: Use wand commands on other players
+    usage: |
+      /wandp <player> <command> : Use wand commands on specific player
+      Example: /wandp PlayerName add fireball
+    permission: magic.commands.wandp
+    permission-message: You don't have permission to use this command!
+    
+  magic:
+    description: Magic administration commands
+    usage: |
+      /magic load : Reload config files
+      /magic save : Save player data
+      /magic commit : Commit all changes
+      /magic cancel : Cancel construction batches
+      /magic list [wands|automata|maps|tasks] <player> : List items
+      /magic clean <player> : Clear lost wands
+      /magic clean ALL : Clear all wands
+    permission: magic.commands.magic
+    permission-message: You don't have permission to use this command!
+    
+  spells:
+    description: List all available spells
+    usage: /spells
+    permission: magic.commands.spells
+    permission-message: You don't have permission to use this command!
+    
+  cast:
+    description: Cast spells directly with parameters
+    usage: |
+      /cast <spell> [param value] [param value]...
+      Example: /cast boom size 20 fire true
+    permission: magic.commands.cast
+    permission-message: You don't have permission to use this command!
+    
+  mgive:
+    description: Give magic items to players
+    usage: |
+      /mgive [player] <item> [amount]
+      Examples:
+      /mgive elder : Give yourself an Elder Wand
+      /mgive PlayerName fireball 5 : Give player 5 fireball spells
+      /mgive PlayerName xp 200 : Give player 200 XP
+      /mgive spell:wolf : Give wolf spell
+      /mgive book:engineering : Give engineering spellbook
+    permission: magic.commands.mgive
+    permission-message: You don't have permission to use this command!
+
+permissions:
+  magic.*:
+    description: Gives access to all Magic commands
+    children:
+      magic.commands.*: true
+      magic.wand.*: true
+      magic.cast.*: true
+      magic.protected: true
+      magic.powered: true
+    default: op
+    
+  magic.commands.*:
+    description: Gives access to all Magic commands
+    children:
+      magic.commands.wand: true
+      magic.commands.wandp: true
+      magic.commands.magic: true
+      magic.commands.spells: true
+      magic.commands.cast: true
+      magic.commands.mgive: true
+    default: op
+    
+  magic.commands.wand:
+    description: Allows use of /wand command
+    default: true
+    
+  magic.commands.wandp:
+    description: Allows use of /wandp command
+    default: op
+    
+  magic.commands.magic:
+    description: Allows use of /magic command
+    default: op
+    
+  magic.commands.spells:
+    description: Allows use of /spells command
+    default: true
+    
+  magic.commands.cast:
+    description: Allows use of /cast command
+    default: true
+    
+  magic.commands.mgive:
+    description: Allows use of /mgive command
+    default: op
+    
+  magic.wand.*:
+    description: Gives access to all wand features
+    children:
+      magic.wand.use: true
+      magic.wand.add: true
+      magic.wand.remove: true
+      magic.wand.configure: true
+      magic.wand.name: true
+      magic.wand.list: true
+      magic.wand.fill: true
+    default: true
+    
+  magic.wand.use:
+    description: Allows use of wands
+    default: true
+    
+  magic.wand.add:
+    description: Allows adding spells to wands
+    default: true
+    
+  magic.wand.remove:
+    description: Allows removing spells from wands
+    default: true
+    
+  magic.wand.configure:
+    description: Allows configuring wand properties
+    default: true
+    
+  magic.wand.name:
+    description: Allows naming wands
+    default: true
+    
+  magic.wand.list:
+    description: Allows listing wand templates
+    default: true
+    
+  magic.wand.fill:
+    description: Allows filling wands with all spells
+    default: op
+    
+  magic.cast.*:
+    description: Gives access to all spells
+    default: true
+    
+  magic.protected:
+    description: Player is always protected
+    default: false
+    
+  magic.powered:
+    description: Player is superpowered
+    default: false 

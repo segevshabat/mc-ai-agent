@@ -1,0 +1,69 @@
+# Magic Plugin Configuration
+# This file contains the main configuration options for the Magic Plugin
+
+# General settings
+general:
+  # Enable debug messages
+  debug: false
+  
+  # Enable spell cast messages
+  show_cast_messages: true
+  
+  # Enable sound effects
+  enable_sounds: true
+  
+  # Enable particle effects
+  enable_particles: true
+  
+  # Auto-save interval (minutes)
+  auto_save_interval: 10
+
+# Wand settings
+wands:
+  # Allow wands to be dropped
+  allow_dropping: false
+  
+  # Wands survive death
+  keep_on_death: true
+  
+  # Show wands on dynmap (if available)
+  show_on_dynmap: true
+  
+  # Default wand inventory mode (chest, cycle, hotbar)
+  inventory_mode: "chest"
+
+# Spell settings
+spells:
+  # Default spell cooldown (seconds)
+  default_cooldown: 1
+  
+  # Default spell range (blocks)
+  default_range: 20
+  
+  # Enable spell costs
+  enable_costs: true
+  
+  # Use XP for spell costs
+  use_xp_costs: true
+  
+  # Use reagents for spell costs
+  use_reagent_costs: false
+
+# Performance settings
+performance:
+  # Maximum concurrent spell effects
+  max_concurrent_effects: 100
+  
+  # Cleanup interval for expired effects (seconds)
+  cleanup_interval: 30
+
+# Integration settings
+integrations:
+  # WorldGuard integration
+  worldguard_enabled: true
+  
+  # Essentials integration
+  essentials_enabled: true
+  
+  # Citizens integration
+  citizens_enabled: true 

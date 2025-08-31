@@ -1,0 +1,110 @@
+# Magic Plugin Messages Configuration
+# This file contains all user-facing messages
+
+# General messages
+general:
+  prefix: "§5[Magic] "
+  no_permission: "§cYou don't have permission to use this command!"
+  player_not_found: "§cPlayer not found!"
+  invalid_arguments: "§cInvalid arguments! Use §7{usage}"
+  reload_success: "§aConfiguration reloaded successfully!"
+  save_success: "§aData saved successfully!"
+
+# Command messages
+commands:
+  # Wand command messages
+  wand:
+    created: "§aWand '§6{wand}§a' created!"
+    not_found: "§cWand template '§7{wand}§c' not found!"
+    spell_added: "§aSpell '§6{spell}§a' added to wand!"
+    spell_removed: "§cSpell '§7{spell}§c' removed from wand!"
+    spell_not_found: "§cSpell '§7{spell}§c' not found!"
+    material_added: "§aMaterial '§6{material}§a' added to wand!"
+    material_removed: "§cMaterial '§7{material}§c' removed from wand!"
+    no_wand_held: "§cYou must be holding a wand!"
+    wand_locked: "§cThis wand is locked!"
+    wand_unlocked: "§aWand unlocked!"
+    wand_filled: "§aWand filled with all available spells!"
+    wand_named: "§aWand renamed to '§6{name}§a'!"
+    enchanted: "§aItem enchanted into a wand!"
+    unenchanted: "§cWand destroyed!"
+    
+  # Magic command messages
+  magic:
+    batches_committed: "§aAll construction batches committed!"
+    batches_cancelled: "§cAll construction batches cancelled!"
+    wands_cleaned: "§aLost wands cleaned for player '§6{player}§a'!"
+    all_wands_cleaned: "§aAll lost wands cleaned!"
+    
+  # Cast command messages
+  cast:
+    spell_cast: "§6Cast spell: §a{spell}"
+    spell_failed: "§cFailed to cast spell '§7{spell}§c'!"
+    cooldown_active: "§cSpell is on cooldown for §7{time}§c seconds!"
+    insufficient_xp: "§cNot enough XP to cast this spell!"
+    
+  # Spells command messages
+  spells:
+    header: "§5=== Available Spells ==="
+    spell_info: "§6{name} §7- {description}"
+    category_header: "§5=== {category} Spells ==="
+    no_spells_found: "§cNo spells found!"
+    search_header: "§5=== Search Results for '{query}' ==="
+    detailed_info: |
+      §5=== {name} ===
+      §7Description: §f{description}
+      §7Category: §6{category}
+      §7Cooldown: §e{cooldown}s
+      §7Range: §e{range} blocks
+      §7XP Cost: §e{xp_cost}
+    
+  # Give command messages
+  mgive:
+    item_given: "§aGave §6{amount}x {item}§a to §6{player}§a!"
+    xp_given: "§aGave §6{amount} XP§a to §6{player}§a!"
+    invalid_item: "§cInvalid item: §7{item}"
+    invalid_amount: "§cInvalid amount: §7{amount}"
+
+# Spell messages
+spells:
+  cast_success: "§6{spell} §acast successfully!"
+  cast_failed: "§cFailed to cast §7{spell}§c!"
+  no_target: "§cNo valid target found!"
+  out_of_range: "§cTarget is out of range!"
+  
+  # Specific spell messages
+  fireball: "§6Fireball launched!"
+  lightning: "§eLightning strikes!"
+  heal: "§aYou feel refreshed!"
+  teleport: "§5*Poof* You teleport!"
+  shield: "§eA magical shield surrounds you!"
+  freeze: "§bYour enemies are frozen!"
+  explosion: "§cBOOM!"
+  light: "§eLet there be light!"
+
+# Wand messages
+wands:
+  activated: "§6Wand activated!"
+  no_spells: "§cThis wand has no spells!"
+  menu_opened: "§5Wand menu opened!"
+  spell_changed: "§aActive spell: §6{spell}"
+  out_of_uses: "§cThis wand is out of uses!"
+  
+# Error messages
+errors:
+  unexpected_error: "§cAn unexpected error occurred!"
+  config_error: "§cConfiguration error: {error}"
+  save_error: "§cFailed to save data!"
+  load_error: "§cFailed to load data!"
+
+# Welcome messages
+welcome:
+  join: "§5Welcome to the Magic Server! §6Use /spells to see available spells."
+  first_time: "§aWelcome to magic! §6Try §e/wand demo §6to get started!"
+
+# Construction messages
+construction:
+  batch_started: "§aConstruction batch started."
+  batch_committed: "§aConstruction batch committed."
+  batch_cancelled: "§cConstruction batch cancelled and undone."
+  undo_performed: "§6Undo completed." 
